@@ -5,12 +5,13 @@ import (
 )
 
 type Links struct {
-	Base    string `json:"base"`
-	Context string `json:"context"`
-	Self    string `json:"self"`
-	Next    string `json:"next"`
-	WebUI   string `json:"webui"`
-	Edit    string `json:"edit"`
+	Base     string `json:"base"`
+	Context  string `json:"context"`
+	Self     string `json:"self"`
+	Next     string `json:"next"`
+	WebUI    string `json:"webui"`
+	Edit     string `json:"edit"`
+	Download string `json:"download"`
 }
 
 type Expandable struct {
@@ -35,4 +36,10 @@ type QueryResponse struct {
 	Limit   int             `json:"limit"`
 	Size    int             `json:"size"`
 	Links   Links           `json:"_links"`
+}
+
+type Extensions struct {
+	MediaType string `json:"mediaType"`
+	FileSize  int    `json:"fileSize"`
+	Comment   string `json:"comment"`
 }

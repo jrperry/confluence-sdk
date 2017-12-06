@@ -108,7 +108,7 @@ func (c *Client) GetSpace(key string) (Space, error) {
 
 func (c *Client) GetContent(id string) (Content, error) {
 	content := Content{}
-	data, err := c.Get(fmt.Sprintf("/content/%s?expand=body.view", id))
+	data, err := c.Get(fmt.Sprintf("/content/%s", id))
 	if err != nil {
 		return content, err
 	}
